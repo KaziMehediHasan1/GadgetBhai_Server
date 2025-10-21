@@ -1,5 +1,6 @@
 import express, { Application } from "express";
 import cors from "cors";
+import dbConnection from "./utils/db";
 
 const app: Application = express();
 
@@ -11,6 +12,7 @@ app.use(
   })
 );
 
+dbConnection()
 app.get("/", (req, res) => {
   res.send("home");
 });
