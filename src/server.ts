@@ -10,3 +10,11 @@ app.use(
     credentials: true,
   })
 );
+
+app.get("/", (req, res) => {
+  res.send("home");
+});
+
+app.use(express.json());
+
+export default app
