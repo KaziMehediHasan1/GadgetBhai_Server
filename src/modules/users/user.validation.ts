@@ -6,4 +6,6 @@ const userValidation = z.object({
   password: z.string().min(6, "Password must be at least 6 characters"),
 });
 
-export { userValidation };
+type userType = z.infer<typeof userValidation>
+
+export { userValidation, userType };
